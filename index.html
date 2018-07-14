@@ -9,24 +9,40 @@
 	    background-image: linear-gradient(-180deg, #504D48 5%, #33342F 96%);
 	    height: 1000px;width:100%;color:#fff;
 	} */
-	body,html{padding:0;margin: 0;}
-	.my{position: absolute;width:500px;height:170px;top:50%;left:50%;transform: translate(-50%,-50%);background: rgba(255, 255, 255, 0.45);
-		color: #fff;text-align: center;line-height: 170px;
+	body,html{padding:0;margin: 0;overflow-x: hidden; background: #c4e2ff;}
+	.my{position: absolute;
+		width:70%;
+		height:50%;
+		top:50%;
+		left:50%;
+		transform: translate(-50%,-50%);
+		background: rgba(255, 255, 255, 0.45);
+		color: #fff;
+		text-align: center;
+		line-height: 170px;
+	}
+	.my a{
+		color: #0082ff;
+		position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    transform: translate(-50%,-50%);
 	}
 </style>
 </head>
 
 <body>
-	<div class="my">欢迎来到王认的网站！</div>
+	<div class="my"><a href="y.html">欢迎来到王认的网站！</a></div>
 	
 </body>
 
-<script src="jquery.min.js"></script>
-<script src="trianglify.min.js"></script>
+<!-- <script src="jquery.min.js"></script>
+<script src="trianglify.min.js"></script> -->
 
 <script>
 	
 	var pattern = Trianglify({ 
+		variance: "0.09",
 		cell_size: 70, 
 		seed: 'znqxu', 
 		x_colors: 'random',
@@ -34,6 +50,6 @@
         height: window.innerHeight
     });
 	//$(".my").append(pattern.canvas())
-	document.body.appendChild(pattern.canvas());
+	//document.body.appendChild(pattern.canvas());
 </script>
 </html>
